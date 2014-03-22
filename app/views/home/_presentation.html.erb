@@ -1,0 +1,85 @@
+<div class="kader" style="width: 635px">
+  <br />
+  <h2>Huidige status om te fietsen is <%= @target %> </h2>
+  <br />
+  <br />
+
+  <div style="width: 100%; margin-top: 8px">
+    <table   style="width:100%; text-align:center; font-weight:bold">
+      <tr>
+        <td style="width:35%; text-align:center">&nbsp;</td>
+        <td style="width:12%; text-align:center">za</td>
+        <td style="width:12%; text-align:center">zo</td>
+        <td style="width:12%; text-align:center">ma</td>
+        <td style="width:12%; text-align:center">di</td>
+        <td style="width:12%; text-align:center">wo</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">Weer</td>
+        <td><%= image_tag('f.png') %></td>
+        <td><%= image_tag('f.png') %></td>
+        <td><%= image_tag('a.png') %></td>
+        <td><%= image_tag('d.png') %></td>
+        <td><%= image_tag('d.png') %></td>
+      </tr>
+      <tr>
+        <td style="text-align: left">Huidig</td>
+        <td style="color:#333"><%= @temperature %></td>
+        <td style="color:#CCC">-</td>
+        <td style="color:#CCC">-</td>
+        <td style="color:#CCC">-</td>
+        <td style="color:#CCC">-</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">Min (&deg;C)</td>
+        <td style="color:#5D92CA">5</td>
+        <td style="color:#5D92CA">2</td>
+        <td style="color:#5D92CA">1</td>
+        <td style="color:#5D92CA">2</td>
+        <td style="color:#5D92CA">2</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">Max (&deg;C)</td>
+        <td style="color:#E63949">10</td>
+        <td style="color:#E63949">10</td>
+        <td style="color:#E63949">11</td>
+        <td style="color:#E63949">11</td>
+        <td style="color:#E63949">11</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">Wind (m/s)</td>
+        <td><%= @wind_speed %></td>
+        <td>9</td>
+        <td>8</td>
+        <td>6</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td style="text-align: left; vertical-align: middle; width: 153px">Fietsweer</td>
+        <td><%= image_tag("Fietsweer_#{ @target_nl }.png") %></td>
+        <td><%= image_tag("Fietsweer_oranje.png") %></td>
+        <td><%= image_tag("Fietsweer_groen.png") %></td>
+        <td><%= image_tag("Fietsweer_groen.png") %></td>
+        <td><%= image_tag("Fietsweer_groen.png") %></td>
+      </tr>
+      <tr>
+        <td style="text-align: left; vertical-align: middle; width: 153px">Luchtkwaliteit</td>
+        <td><%= @air_quality %></td>
+        <td> - </td>
+        <td> - </td>
+        <td> - </td>
+        <td> - </td>
+      </tr>
+      <tr>
+        <td style="text-align: left; vertical-align: middle; width: 153px">Fijnstof 2.5 um (Ref = 50 µg/m³)</td>
+        <td><%= @fijnstof_2_5pm %></td>
+        <td> - </td>
+        <td> - </td>
+        <td> - </td>
+        <td> - </td>
+      </tr>
+    </table>
+    <%#= @target_nl %>
+    <%#= @air_quality %>
+  </div>
+</div>
