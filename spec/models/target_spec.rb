@@ -5,4 +5,7 @@ describe Target do
     described_class.new
   end
 
+  it"should read target data" do
+    subject.read_target
+  end
 end
